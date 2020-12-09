@@ -1,0 +1,60 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Loggin";
+}
+
+<div class="">
+    <br />
+    <div class="row justify-content-center">
+        <div class="col col-md-6" >
+            <div class="card shadow">
+                <div class="card-body">
+                    <h6 class="card-title text-center">Inicia session en tu cuenta</h6>
+                    <hr />
+                    <div class="text-center">
+                        <i class="fas fa-user-circle fa-6x " style="text-shadow: 3px 3px 8px #272634;"></i>
+                    </div>
+                    <br />
+                    <form class="">
+                        <div class="row justify-content-center">
+                            <div class="col col-md-8" >
+                                <div class="form-group" >
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text shadow" style="background-color:white;"><i class="fas fa-envelope"></i></div>
+                                        </div>
+                                        <input type="email" class="form-control shadow" id="inlineFormInputGroup" placeholder="name@example.com">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text shadow" style="background-color:white;"><i class="fas fa-lock"></i></div>
+                                        </div>
+                                        <input type="password" class="form-control shadow" id="inlineFormInputGroup" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input shadow" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label text-monospace text-justify" for="defaultCheck1">
+                                        Recordarme
+                                    </label>
+                                </div>
+                                <br />
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-outline-success btn-block shadow">Iniciar session</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br />
+                    <hr />
+                    <h6 class="text-center">¿No tienes una cuenta? <a asp-area="" asp-controller="Loggin" asp-action="Registrar">Registrate</a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

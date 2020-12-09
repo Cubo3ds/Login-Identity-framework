@@ -1,0 +1,51 @@
+﻿@inject SignInManager<IdentityUser> signInManager;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="">
+    <div class="row justify-content-center">
+        <div class="col col-md-4">
+            <h1 class="text-center">Bienvenido @User.Identity.Name</h1>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col col-md-8">
+            <p class="text-justify text-monospace">
+                Este bloc es un sitio donde se reflejan pensamientos, pasatiempos y
+                sobre todo la practica de la programación en el maravilloso entorno de ASP .NET.
+                Si estas intersadon en concerlo a profundidad
+                te siguiero que te registres y conozcas la magia que da vida a este sitio.
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col col-md-6">
+            <img class="img-fluid rounded mx-auto d-block shadow" src="~/img/iconCubo.jpg" alt="Responsive image" />
+        </div>
+    </div>
+    <br />
+    @if (signInManager.IsSignedIn(User))
+    {
+        <div class="row justify-content-center">
+            <div class="col col-md-4">
+                <button class="btn btn-success btn-block shadow ">let´s go!</button>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-center">
+            <div class=" col col-md-4">
+                <a class="btn btn-outline-success btn-block shadow" asp-area="" asp-controller="Loggin" asp-action="Index">Iniciar session</a>
+            </div>
+            <div class="col col-md-4">
+                <a class="btn btn-outline-info  btn-block shadow" asp-area="" asp-controller="Loggin" asp-action="Registrar">Registrarse</a>
+            </div>
+        </div>
+    }
+
+    <br />
+</div>

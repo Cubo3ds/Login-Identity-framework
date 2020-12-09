@@ -1,0 +1,64 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Registrar";
+}
+<br />
+<div class="">
+    <div class="row justify-content-center">
+        <div class="col col-md-6" >
+            <div class="card shadow">
+                <div class="card-body">
+                    <h6 class="card-title text-center">Registrate y comienza a aprender</h6>
+                    <hr />
+                    <form method="post" class="">
+                        <div class="row justify-content-center">
+                            <div class="col col-md-8">
+                             
+                                <div class="form-group ">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text shadow" style="background-color:white;"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control shadow" id="inlineFormInputGroup" placeholder="Nombre completo">
+                                    </div>
+                                </div>
+
+                                <div class="form-group" >
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text shadow" style="background-color:white;"><i class="fas fa-envelope"></i></div>
+                                        </div>
+                                        <input type="email" class="form-control shadow" id="inlineFormInputGroup" placeholder="name@example.com">
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group" >
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text shadow" style="background-color:white;"><i class="fas fa-lock"></i></div>
+                                        </div>
+                                        <input type="password" class="form-control shadow" id="inlineFormInputGroup" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-check" style="letter-spacing: 0.130em;">
+                                    <input class="form-check-input shadow" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label text-monospace text-justify" for="defaultCheck1">
+                                        Me interesa recibir correos electrónicos interesantes
+                                        y recomendaciones.
+                                    </label>
+                                </div>
+                                <br />
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-block shadow">Registrate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br />
+                    <hr />
+                    <h6 class="text-center">¿Ya tienes una cuenta? <a asp-area="" asp-controller="Loggin" asp-action="Index">Iniciar session</a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
